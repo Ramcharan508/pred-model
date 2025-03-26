@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profit Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Profit Prediction for Companies</h1>
+        <form id="predictForm">
+            <div class="form-group">
+                <label for="rdSpend">R&D Spend ($):</label>
+                <input type="number" id="rdSpend" required />
+            </div>
+            <div class="form-group">
+                <label for="adminSpend">Administration ($):</label>
+                <input type="number" id="adminSpend" required />
+            </div>
+            <div class="form-group">
+                <label for="marketingSpend">Marketing Spend ($):</label>
+                <input type="number" id="marketingSpend" required />
+            </div>
+            <button type="submit" class="btn">Predict Profit</button>
+        </form>
+        <div id="predictionResult" class="result">
+            <h2>Predicted Profit: <span id="profitValue">$0.00</span></h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
