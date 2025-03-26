@@ -20,7 +20,7 @@ document.getElementById('predictForm').addEventListener('submit', function(e) {
     };
 
     // Call the backend model using fetch
-    fetch('http://127.0.0.1:5000/predict', {  // Change URL to your server's endpoint
+    fetch('https://your-app-name.onrender.com/predict', {  // Change URL to your server's endpoint
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
