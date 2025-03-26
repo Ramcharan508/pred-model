@@ -20,7 +20,7 @@ document.getElementById('predictForm').addEventListener('submit', function(e) {
     };
 
     // Call the backend model using fetch
-    fetch('https://your-app-name.onrender.com/predict', {  // Change URL to your server's endpoint
+    fetch('https://pred-model-9m7m.onrender.com/predict', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
