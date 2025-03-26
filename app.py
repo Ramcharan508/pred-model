@@ -18,10 +18,6 @@ except FileNotFoundError:
 @app.route('/')
 def home():
     return jsonify({"message": "Flask API is running!"})
-@app.route('/predict', methods=['GET', 'POST'])
-def predict():
-    if request.method == 'GET':
-        return jsonify({"message": "Send a POST request with JSON data"})
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
