@@ -3,9 +3,6 @@ import joblib
 import os
 import numpy as np
 from flask_cors import CORS 
-@app.route('/')
-def home():
-    return "Flask API is Running! Use the /predict endpoint."
 app = Flask(__name__)
 CORS(app)
 
@@ -15,7 +12,9 @@ try:
     scaler = joblib.load('scaler.pkl')  # Replace with the correct scaler path
 except FileNotFoundError:
     print("Error: Model or Scaler file not found! Train the model first.")
-    
+@app.route('/')
+def home():
+    return "Flask API is Running! Use the /predict endpoint."
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
